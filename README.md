@@ -1,4 +1,4 @@
-# CodeAlpha Ultimate Age Calculator
+# Ultimate Age Calculator
 
 ![Age Calculator - Input View](images/withIntpuAge.png)
 
