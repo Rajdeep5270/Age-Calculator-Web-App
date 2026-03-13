@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeAlpha Ultimate Age Calculator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="app-container">
+        <div class="calculator-box">
+            <header>
+                <h1>Age Calculator</h1>
+                <p>Enter your birth date below</p>
+            </header>
+
+            <section class="controls">
+                <input type="date" id="birthDate">
+                <button onclick="calculateAge()">Calculate Age</button>
+            </section>
+
+            <section class="result-area" id="resultArea">
+                <div class="result-box years">
+                    <span id="years" class="number">--</span>
+                    <span class="label">Years</span>
+                </div>
+                <div class="result-box months">
+                    <span id="months" class="number">--</span>
+                    <span class="label">Months</span>
+                </div>
+                <div class="result-box days">
+                    <span id="days" class="number">--</span>
+                    <span class="label">Days</span>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

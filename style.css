@@ -1,0 +1,152 @@
+/* --- Global Resets --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: #f0f3f7;
+    /* Very light neutral grey */
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* --- Main Container --- */
+.calculator-box {
+    background: #ffffff;
+    width: 100%;
+    max-width: 450px;
+    border-radius: 25px;
+    padding: 40px;
+    box-shadow: 20px 20px 60px #d9d9d9,
+        -20px -20px 60px #ffffff;
+    /* Smooth neumorphic shadow */
+}
+
+/* --- Header Section --- */
+header {
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #1a1a1a;
+    letter-spacing: -1px;
+}
+
+header p {
+    color: #666;
+    font-size: 1rem;
+    margin-top: 5px;
+}
+
+/* --- Controls Section (Input + Button) --- */
+.controls {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 35px;
+}
+
+input[type="date"] {
+    padding: 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #333;
+    outline: none;
+    transition: all 0.3s ease;
+    background: #fafafa;
+}
+
+input[type="date"]:focus {
+    border-color: #4facfe;
+    box-shadow: 0 0 10px rgba(79, 172, 254, 0.2);
+}
+
+button {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    color: white;
+    border: none;
+    padding: 16px;
+    border-radius: 12px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.1s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+    box-shadow: 0 5px 15px rgba(79, 172, 254, 0.4);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* --- Result Area (The Real Change) --- */
+.result-area {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.result-box {
+    background: #f8f9fb;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    border: 1px solid #eee;
+    transition: all 0.4s ease;
+}
+
+/* Highlight the whole result area once data is loaded */
+.result-area.active .result-box {
+    background: #fff;
+    border-color: transparent;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+.result-box .number {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #4facfe;
+    /* Main accent color */
+    line-height: 1;
+    margin-bottom: 5px;
+}
+
+/* Highlight Year color specifically */
+.result-box.years .number {
+    color: #007bff;
+}
+
+.result-box .label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 400px) {
+    .calculator-box {
+        padding: 25px;
+    }
+
+    .result-box .number {
+        font-size: 2rem;
+    }
+}
